@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mission to Mars</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="style.css"> -->
+        <meta charset="UTF-8">  
+      </head>
+  <body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <span class="border"><h1>Mission to Mars</h1></span>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">scrap new data!</a></p>
+    </div>
+    <div class="row">
+    
+      <!-- First of two columns -->
+      <div class="col-md-12">
+        <h2>The Latest Mars News</h2>
+        <h3> {{ marsTitle.title }}</h3>
+        <h4> {{ marsTitle.paragraph }}</h4>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Second of two columns -->
+      <div class="col-md-8 col-sm-4" >
+        <img class="img-fluid" src="{{ imgLink.img_link }}" alt="marsimg" >
+        </div>
+      <div class="col-md-4">
+        <h5>Mars Fact</h5>
+        <table class="table table-striped">
+          <thead>
+            <th scope="col">
+              Description
+            </th>
+            <th scope="col"> Mars Data</th>
+          </thead>
+          <tr>
+            <td> Equatorial Diameter</td>
+            <td>
+              {{marsData.equatorial_diameter}}
+            </td>
+          </tr>
+          <tr>
+            <td> Polar Diameter</td>
+            <td>
+              {{marsData.polar_diameter}}
+            </td>
+          </tr>
+          <tr>
+            <td> Mass</td>
+            <td>
+              {{marsData.mass}}
+            </td>
+          </tr>
+          <tr>
+            <td> Moons</td>
+            <td>
+              {{marsData.moons}}
+            </td>
+          </tr>
+          <tr>
+            <td> Orbit Distance</td>
+            <td>
+              {{marsData.orbit_distance}}
+            </td>
+          </tr>
+          <tr>
+            <td> Orbit Period</td>
+            <td>
+              {{marsData.orbit_period}}
+            </td>
+          </tr>
+          <tr>
+            <td> Surface  Temperature</td>
+            <td>
+              {{marsData.surface_temperature}}
+            </td>
+          </tr>
+          <tr>
+            <td> First Record</td>
+            <td>
+              {{marsData.first_recorded}}
+            </td>
+          </tr>
+          <tr>
+            <td> Recorded By</td>
+            <td>
+              {{marsData.recorded_by}}
+            </td>
+          </tr>
+        </table>   
+        <h5><a class="btn btn-primary btn-lg" href="/hemisphere" role="button">To get the hemisphere image </a></h5> 
+       </div>
+    </div>
+
+  
+  </div>
+</body>
+
+</html>
